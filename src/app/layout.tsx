@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "PUNG Airsoft Workshop",
   description: "Airsoftový servis – Petr Půlpán & Roman Nguyen",
+  metadataBase: new URL("https://pung.cz"),
 };
 
 export default function RootLayout({
