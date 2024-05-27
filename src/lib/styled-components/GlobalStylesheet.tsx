@@ -16,4 +16,8 @@ export const GlobalStylesheet = createGlobalStyle`
     font-family: "inter", sans-serif;
     font-size: 16px;
   }
+
+  a {
+    color: #bb9c76;
+  }
 `;
