@@ -20,7 +20,7 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 4rem;
-  padding: 30dvh 2rem;
+  padding: 20dvh 2rem;
 `;
 
 const Name = styled.div`
@@ -30,6 +30,7 @@ const Name = styled.div`
   text-transform: uppercase;
   font-size: 0.8rem;
   letter-spacing: 0.2rem;
+  line-height: 1.35em;
   span {
     opacity: 0.5;
   }
@@ -39,6 +40,7 @@ const Title = styled(Name)`
   font-size: 1.25rem;
   opacity: 0.9;
   font-weight: 600;
+  text-align: center;
 `;
 
 const P = styled.p`
@@ -49,16 +51,27 @@ const P = styled.p`
   line-height: 1.7;
   text-align: center;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.25rem;
   a {
     color: #bb9c76;
   }
 `;
 
+const SquarePhotoContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  max-width: 300px;
+`;
 const Photo = styled(Image)`
   border-radius: 50%;
-  width: 360px;
-  height: 360px;
+  max-width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 `;
 
 export const HomePage = () => {
@@ -76,16 +89,17 @@ export const HomePage = () => {
           Petr Půlpán <span>&amp;</span> Roman Nguyen
         </Name>
       </Flex>
-      <Flex gap="elementsContainer">
-        <Button as={LinkExternal} href={MAIL_HREF}>
-          <MdAlternateEmail />
-          Napiš nám
-        </Button>
+      <Flex gap="elementsContainer" flexWrap="wrap" justifyContent="center">
         <Button as={LinkExternal} $hoverContent="@pung_airsoft" href={IG_HREF}>
           <BiLogoInstagramAlt />
           Podídej se na naší práci
         </Button>
+        <Button as={LinkExternal} href={MAIL_HREF}>
+          <MdAlternateEmail />
+          Napiš nám
+        </Button>
       </Flex>
+      <div />
 
       <Flex direction="column" gap="elementsContainer" alignItems="center">
         <P>
@@ -120,9 +134,17 @@ export const HomePage = () => {
           máš jakýkoliv rozpočet, napiš a vymyslíme nejlepší řešení. A kdyby
           cokoliv, furt máš u nás záruku.
         </P>
+      </Flex>
+      <Flex direction="column" gap="elementsContainer" justifyContent="center">
+        <Photo
+          width={300}
+          height={300}
+          objectFit="contain"
+          src={fotka}
+          alt="Petr Půlpán a Roman Nguyen"
+        />
         <P>– PUNG / Petr & Roman –</P>
       </Flex>
-      <Photo src={fotka} alt="Petr Půlpán a Roman Nguyen" />
     </Container>
   );
 };
