@@ -34,7 +34,7 @@ export const Button = styled.button.attrs<ButtonProps>(
 )`
   position: relative;
   overflow: hidden;
-  border-radius: 4px;
+  border-radius: 6px;
   background: #bb9c76;
   color: #272624;
   padding: 2rem;
@@ -49,7 +49,8 @@ export const Button = styled.button.attrs<ButtonProps>(
   font-size: 1rem;
   gap: 0.5rem;
   text-decoration: none;
-  transition: all 0.2s;
+  transition: all 0.1s;
+  border: 2px solid var(--bg-primary);
   svg {
     font-size: 1.5em;
   }
@@ -58,13 +59,16 @@ export const Button = styled.button.attrs<ButtonProps>(
     opacity: 0;
     scale: 1.25;
     transition: all 0.2s;
+    pointer-events: none;
   }
 
   &:hover {
-    box-shadow: inset 0 0 1000px 0 rgba(0, 0, 0, 0.1);
+    /* box-shadow: inset 0 0 1000px 0 rgba(0, 0, 0, 0.2); */
+    outline: 4px solid #bb9c7655;
     ${HoverContent} {
       opacity: 1;
       scale: 1;
+      /* box-shadow: inset 0 0 1000px 0 rgba(0, 0, 0, 0.2); */
     }
   }
 `;
