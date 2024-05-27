@@ -31,6 +31,8 @@ const Name = styled.div`
   font-size: 0.8rem;
   letter-spacing: 0.2rem;
   line-height: 1.35em;
+  text-align: center;
+  line-height: 1.5em;
   span {
     opacity: 0.5;
   }
@@ -47,24 +49,19 @@ const P = styled.p`
   color: white;
   opacity: 0.8;
   letter-spacing: 0.05em;
-  max-width: 760px;
+  max-width: 640px;
   line-height: 1.7;
   text-align: center;
   font-weight: 400;
   font-size: 1.25rem;
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+  }
   a {
     color: #bb9c76;
   }
 `;
 
-const SquarePhotoContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  width: 100%;
-  max-width: 300px;
-`;
 const Photo = styled(Image)`
   border-radius: 50%;
   max-width: 100%;
@@ -92,7 +89,7 @@ export const HomePage = () => {
       <Flex gap="elementsContainer" flexWrap="wrap" justifyContent="center">
         <Button as={LinkExternal} $hoverContent="@pung_airsoft" href={IG_HREF}>
           <BiLogoInstagramAlt />
-          Podídej se na naší práci
+          Naše práce
         </Button>
         <Button as={LinkExternal} href={MAIL_HREF}>
           <MdAlternateEmail />
