@@ -120,6 +120,7 @@ export const HomePage = () => {
           máš jakýkoliv rozpočet, napiš a vymyslíme nejlepší řešení. A kdyby
           cokoliv, furt máš u nás záruku.
         </P>
+        <P>– PUNG / Petr & Roman –</P>
       </Flex>
       <Photo src={fotka} alt="Petr Půlpán a Roman Nguyen" />
     </Container>
