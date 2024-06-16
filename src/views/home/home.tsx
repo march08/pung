@@ -111,6 +111,9 @@ const AboutSection = styled.section`
 
 const DashDivider = styled.div`
   width: max-content;
+  max-width: 100%;
+  text-align: center;
+  line-height: 1.5em;
   color: white;
   position: relative;
   text-transform: uppercase;
