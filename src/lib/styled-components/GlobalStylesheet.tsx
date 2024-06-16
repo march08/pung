@@ -3,7 +3,10 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStylesheet = createGlobalStyle`
   :root {
-    --bg-primary: #191917;
+    --bg-secondary: #171715;
+    --bg-primary: #141411;
+    --app-primary: #B99D78;
+    --text-primary: #eee;
   }
   
   html, body, * {

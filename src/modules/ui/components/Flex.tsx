@@ -6,7 +6,7 @@ const gaps = {
    * usually for container for text elements
    */
   text: css`
-    gap: 0.25rem;
+    gap: 0.5rem;
   `,
   /**
    * small element with flexbox, such as button with text and icon
