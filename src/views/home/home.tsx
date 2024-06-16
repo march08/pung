@@ -261,7 +261,7 @@ export const HomePage = () => {
       </ServicesSection>
 
       <AboutSection>
-        <DashDivider>Kdo jsme</DashDivider>
+        <DashDivider>Sofťáci sofťákům aneb kdo jsme</DashDivider>
         <Flex direction="column" gap="elementsContainer" alignItems="center">
           <PAbout>
             Jsme dvojka nadšenců, co začala hrát airsoft dobrých patnáct let
