@@ -10,6 +10,15 @@ const nextConfig = {
       fileName: false,
     },
   },
+  redirects: async () => {
+    return [
+      {
+        source: "/instagram",
+        destination: "https://www.instagram.com/pung_airsoft",
+        permanent: false,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
