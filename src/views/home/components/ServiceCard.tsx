@@ -9,7 +9,7 @@ const Container = styled(Flex).attrs({
 })`
   background: var(--bg-primary);
   padding: 2rem;
-  max-width: 960px;
+  max-width: 1024px;
   color: var(--text-primary);
   min-width: 320px;
 `;

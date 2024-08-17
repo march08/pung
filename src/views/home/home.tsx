@@ -10,8 +10,9 @@ import { BiLogoInstagramAlt } from "react-icons/bi";
 import { MdAlternateEmail } from "react-icons/md";
 import { LinkExternal } from "@pung/modules/ui/components/LinkExternal";
 import { ServiceCard } from "./components/ServiceCard";
-import { H3, P, Text, TextContainer } from "@pung/modules/ui/components/Text";
+import { H3, P, TextContainer } from "@pung/modules/ui/components/Text";
 import { Ul } from "@pung/modules/ui/components/Ul/Ul";
+import { BiDownArrowAlt } from "react-icons/bi";
 
 const IG_HREF = "https://www.instagram.com/pung_airsoft";
 const MAIL_HREF = "mailto:workshop@pung.cz";
@@ -22,8 +23,9 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
   padding: 20dvh 2rem;
+  position: relative;
   @media screen and (max-width: 768px) {
     gap: 2rem;
   }
@@ -139,6 +141,23 @@ const DashDivider = styled.div`
   }
 `;
 
+const ArrowContainer = styled.a`
+  margin-top: auto;
+  color: var(--app-primary);
+  font-size: 3rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  opacity: 0.4;
+  transition: 0.1s all;
+  cursor: pointer;
+  &:hover {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0.5rem) scale(1);
+  }
+`;
+
 export const HomePage = () => {
   return (
     <>
@@ -170,32 +189,83 @@ export const HomePage = () => {
             Napiš nám
           </Button>
         </Flex>
+        <ArrowContainer href="#full-up">
+          <BiDownArrowAlt />
+        </ArrowContainer>
       </Container>
-      <ServicesSection>
-        <DashDivider>Nabízíme</DashDivider>
+      <ServicesSection id="full-up">
+        <DashDivider>PUNG FULL UPGRADE</DashDivider>
         <ServicesContainer>
           <ServiceCard
             style={{ background: "#5d4f3d" }}
             title={
               <>
-                Kompletní <em>upgrade</em>
+                FULL-UP <em>HIGH Speed</em>
               </>
             }
           >
             <P>
-              Potřebuješ nový pocit ze střílení? Okamžitou reakci na spoušť,
-              brutální kadenci nebo výkon, se kterým na každe akci trefíš
-              soupeře dřív, než se k tobě dostane? Doporučíme ti upgrade
-              komponent, který ti bude vyhovovat a dorazí ti zbraň, proti které
-              nebudeme chtít hrát ani my.
+              Instantní odezva na semi s kadencí 25 až 30 ran za sekundu. Tolik
+              vymáčkneme z tvého kvéru s výkonem do 1.7J. Taková kadence už u
+              soupeřů budí respekt. Protože se ani v křoví neschovají :)
+            </P>
+            <Ul>
+              <li>
+                Očekávej nejlepší kombinaci dílů pro dosažení extrémní rychlosti
+                i odezvi na spoušť a cyklu pro správné podávání kuliček bez
+                ztráty výkonu na full-auto při extremní kadenci.
+              </li>
+              <li>
+                Odlehčený píst a hlava pístu pro co nejnižší opotřebení při
+                nárazech.
+              </li>
+            </Ul>
+          </ServiceCard>
+          <ServiceCard
+            style={{ background: "#342e27" }}
+            title={
+              <>
+                Full-UP <em>SEMI/DMR</em>
+              </>
+            }
+          >
+            <P>
+              Dostaň soupeře dřív, než se k tobě dostane. Nech si postavit kvér
+              výkonem airsotové DMR (2.3-2.7J dle přání) s efektivním dostřelem
+              70+ metrů a okamžitou reakcí na spoušť.
             </P>
             <TextContainer>
-              <H3>V rámci upgradu provádíme</H3>
+              <Ul>
+                <li>
+                  Ideální sestava dílů pro co nejlepší přesnost a konzistentní
+                  výkon, tedy použití kvalitních hop-up komponent a
+                  vzduchotechniky.
+                </li>
+                <li>
+                  Adekvátní zatížení pístu pro dosažení výkonu s těžšími
+                  kuličkami (0.40g a více).
+                </li>
+              </Ul>
+            </TextContainer>
+          </ServiceCard>
+        </ServicesContainer>
+
+        <ServicesContainer>
+          <ServiceCard
+            style={{ background: "#1f1e1e" }}
+            title={
+              <>
+                V rámci <em>upgradu</em> provádíme
+              </>
+            }
+          >
+            <TextContainer>
               <Ul>
                 <li>
                   Dosažení požadovaného výkonu, ať už cílíš na 1.7J, 2.5J nebo
                   30 ran za sekundu.
                 </li>
+                <li>Výběr a doporučení vhodných kvalitních komponent.</li>
                 <li>
                   Usazení a promazání vnitřních dílů vazelínami k tomu určenými.
                 </li>
@@ -204,9 +274,9 @@ export const HomePage = () => {
                   chod a delší životnost dílů, korekce AOE a cyklu.
                 </li>
                 <li>
-                  Dosazení vzduchotechniky mechaboxu, které zlepší efektivity
-                  dílů pro dosažení cíleného a stabilního výkonu při použití
-                  adekvátní pružiny.
+                  Dosazení a zatěsnění vzduchotechniky pro maximální efektivitu
+                  k dosažení cíleného a stabilního výkonu při použití adekvátní
+                  pružiny.
                 </li>
                 <li>
                   Nainstalování hlavně a hop gumičky, perfektní zatěsnění a
@@ -218,9 +288,16 @@ export const HomePage = () => {
                   mají - rovně, pokud nefouká :)
                 </li>
                 <li>Instalace procesorové jednotky.</li>
+                <li>
+                  Testování zbraně nejen na chronu, ale i venku, abychom měli
+                  jistotu, že zbraně střílí perfektně.
+                </li>
               </Ul>
             </TextContainer>
           </ServiceCard>
+        </ServicesContainer>
+        <DashDivider>Potřebuješ údržbu nebo něco nefunguje?</DashDivider>
+        <ServicesContainer>
           <ServiceCard
             title={
               <>
@@ -255,7 +332,7 @@ export const HomePage = () => {
                   Perfektní vypodložení kol pro hladší chod a delší životnost
                   dílů, korekce AOE, korekce cyklu.
                 </li>
-                <li>Případná výměna opotřebených dílů.</li>
+                <li>Případná výměna opotřebených dílů, kabeláže apod.</li>
               </Ul>
             </TextContainer>
           </ServiceCard>
