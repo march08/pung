@@ -212,7 +212,7 @@ export const HomePage = () => {
             <Ul>
               <li>
                 Očekávej nejlepší kombinaci dílů pro dosažení extrémní rychlosti
-                i odezvi na spoušť a cyklu pro správné podávání kuliček bez
+                i odezvy na spoušť a cyklu pro správné podávání kuliček bez
                 ztráty výkonu na full-auto při extremní kadenci.
               </li>
               <li>
